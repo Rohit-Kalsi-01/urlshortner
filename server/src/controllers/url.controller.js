@@ -5,6 +5,7 @@ export const shortenUrl = async (req, res) => {
  const { originalUrl } = req.body;
 
   const shortCode = nanoid(6);
+//   const shortCode=Math.random().toString(36).substring(2, 8);
 
  const newUrl = await Url.create({
     originalUrl,
